@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/acciojob_logo.svg" type="image/x-icon">
+    <title>Validation</title>
+
+<link rel="stylesheet" href="style.css">
+<!-- fontawesome  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./images/acciojob_logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                AccioJob</a>
+                <div><p class="line"></p></div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Admission</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Sessions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Live Doubt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active text-danger" href="#" tabindex="-1" aria-disabled="true">Contact Us : 033-52265-45236</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <div class="container">
+        <h1 class="display-3 title">Registration Form </h1>
+        <form class="row g-3 registration-form">
+          <div class="col-md-6">
+            
+            <label for="first-name" class="form-label">First name</label>
+            <input type="text" class="form-control" id="first-name" autocomplete="off" placeholder="First Name">
+            <div class="valid-feedback" id="first-name-valid">
+              Looks good!
+            </div>
+            <div class="invalid-feedback" id="first-name-invalid">
+              Please enter a valid first name.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="last-name" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="last-name" autocomplete="off" placeholder="Last Name">
+            <div class="valid-feedback" id="last-name-valid">
+              Looks good!
+            </div>
+            <div class="invalid-feedback" id="last-name-invalid">
+              Please enter a valid last name.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend" autocomplete="off" placeholder="Email">
+              <div class="valid-feedback" id="email-valid">
+                Looks good!
+              </div>
+              <div class="invalid-feedback" id="email-invalid">
+                Please enter a valid email.
+              </div>
+            </div>
+          </div>
+            <div class="col-md-6">
+            <label for="phno" class="form-label">Phone Number</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">+91</span>
+              <input type="text" class="form-control" id="phno" aria-describedby="inputGroupPrepend" autocomplete="off" maxlength="10" onkeyup="numberOnly(this)" placeholder="Enter 10 Digits Phone Number">
+              <div class="valid-feedback" id="phno-valid">
+                Looks good!
+              </div>
+              <div class="invalid-feedback" id="phno-invalid">
+                Please provide a valid phone number.
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <label for="batch-no" class="form-label">Batch No</label>
+            <select class="form-select" id="batch-no">
+              <option value="None" selected>Select Batch No ...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <div class="valid-feedback" id="batchno-valid">
+              Looks good!
+            </div>
+            <div class="invalid-feedback" id="batchno-invalid">
+              Please select a valid Batch No.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="curr-module" class="form-label">Current Module</label>
+            <select class="form-select" id="curr-module">
+              <option value="None" selected>Select Current Module ...</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+            <div class="valid-feedback" id="module-valid">
+              Looks good!
+            </div>
+            <div class="invalid-feedback" id="module-invalid">
+              Please select a valid module.
+            </div>
+          </div>
+            <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="tnC">
+              <label class="form-check-label" for="tnC">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback" id="tnC-invalid">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12 submit-btn">
+            <button class="btn btn-dark btn-lg btn1" type="button" onclick="validate()">Submit form</button>
+          </div>
+        </form>
+        
+      </div>
+      <div class="footer">
+        <p><u>Connect With Us</u>: <i class="fa-brands fa-linkedin"></i> <i class="fa-brands fa-square-facebook"></i> <i class="fa-brands fa-square-instagram"></i></p>
+      </div>
+      
+
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
