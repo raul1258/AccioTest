@@ -91,7 +91,7 @@ function validate () {
 	}
     
 }
-function numberOnly(input){
-	var num = /[^0-9]/gi;
-	input.value = input.value.replace(num,"");
-}
+// function numberOnly(input){
+// 	var num = /[^0-9]/gi;
+// 	input.value = input.value.replace(num,"");
+// }
